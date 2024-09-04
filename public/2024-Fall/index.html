@@ -30,33 +30,56 @@
 <h1>CS 7180 - Fall 2024 - The Structure and Interpretation of Deep Networks</h1>
 
 <p>Tuesdays 11:45 AM - 1:25 PM and Thursdays 2:50 PM - 4:30 PM in Ell Hall 410.</p>
-<p>This course will be built around a review of the current literature in
-   interpretable deep networks and deep network explanation methods (also known as 
-   "explainable AI," "interpretable AI," or "mechanistic interpretability").  Topics may include:
 
-<ul>
-    <li>Model representations - "How do deep networks represent information?"</li>
-    <li>Internal computation - "What do models do with these internal representations?"</li>
-    <li>Learning dynamics - "What happens to model representations during training? How do they learn?"</li>
-    <li>Understanding the world - "To what extent do deep networks build models of the world? How can we make them more robust?"</li>
-</ul>
+<p>This course has two goals
+<ol>
+  <li>Read and discuss current literature in interpretable deep networks
+      (also known as "mechanistic interpretability", "interpretable AI"
+      or "explainable AI".)
+  <li>Collaborate to create a practical handbook that on mechanistic
+      interpretability that can inform your future research.
+</ol>
 
-<p>Prerequisites: CS 7150 or equivalent. You must be familiar with
-    training, fine-tuning, and using deep networks with pytorch, including
-    use in both natural language (transformers, RNNs, LLMs) and computer vision
-    settings (CNNs, GANs, VAEs, Diffusion models). You must be
-    comfortable with machine learning, linear algebra, gradient optimization
-    methods, and probability and statistics.
+<h2>Prerequisites</h2>
+
+<p>CS 7150 or equivalent. You must be familiar with
+training, fine-tuning, and using deep networks with pytorch, including
+use in both natural language (transformers, RNNs, LLMs) and computer vision
+settings (CNNs, GANs, VAEs, Diffusion models). You must be
+comfortable with machine learning, linear algebra, gradient optimization
+methods, and probability and statistics.
 
 <p>The course will be designed for research-oriented grad students.
-    Because it is centered around student presentations, interactive demonstrations,
-    and discussions, it will be held in-person only. 
-<!-- <ul>
-    <li>Model representations - probing, neurons, subspaces, SAEs</li>
-    <li>Internal computation - circuits, factual association, induction heads</li>
-    <li>Learning dynamics - grokking, data attribution, in-context learning, unlearning</li>
-    <li>Understanding the world - world models, safety, steering, automated scientists </li>
-</ul> -->
+Because it is centered around student presentations, interactive demonstrations,
+and discussions, it will be held in-person only.
+
+<h2>Syllabus</h2>
+
+<p>In each class we will discuss 2 or more specific papers:
+<b>the detailed course schedule can be found <a href="">here</a></b>.
+
+<p>Our readings can be divided into four major modules.
+During each module we will read about the research methods that
+scientists use to answer specific questions about large AI models.
+
+<ul>
+    <li>Neural representations (Sept 12) - "How do neural networks represent information?"</li>
+    <li>Internal computation (Oct 8) - "How do they perform algorithms?"</li>
+    <li>Learning dynamics (Oct 29) - "How do they learn to generalize?"</li>
+    <li>Understanding the world (Nov 19) - "How do they model the world?"</li>
+</ul>
+
+<p>On December 10 and/or 12, we will have a poster session day for students
+to present their final projects.
+
+<!--
+<ul>
+  <li>Model representations - probing, neurons, subspaces, SAEs</li>
+  <li>Internal computation - circuits, factual association, induction heads</li>
+  <li>Learning dynamics - grokking, data attribution, in-context learning, unlearning</li>
+  <li>Understanding the world - world models, safety, steering, automated scientists </li>
+</ul>
+-->
 
 <!-- <ul>
   <li>Salience methods: answering "what is the network looking at?"
@@ -67,44 +90,54 @@
 
 <h2>Course Structure</h2>
 
-<p><b>The course schedule can be found <a href="">here</a>.</b> Every class, 2-3 students will be 
-    responsible for leading a discussion centered around the papers listed on the schedule. For that day,
-    discussion leaders will be responsible for: 
-
-    <!-- (a) reading the papers for the day before everybody else
-    (b) creating a one-page webpage/latex "explanation" of the beautiful idea and state-of-the-science for the papers
-    (c) creating "a googleform of reading group questions" to post to the class the day before, to drive the discussion -->
+<p>Each enrolled student will help lead two classes.
+  <b>On two days you will be on a team of 2-3 responsible for leading a
+  discussion centered around the papers listed on the schedule.</b>
+  When you are a discussion leader, you will work with your team
+  to create four things:
 <ol>
-    <li>Reading the main papers for that day, as well as any other supplementary articles/links provided</li>
-    <li>Creating a one-page webpage/latex "explainer" of the beautiful idea and state-of-the-science for the papers</li>
-    <li>Posting three discussion questions on Canvas for other students to respond to before class</li>
+  <li><b>Handbook page.</b>  Create a one-page webpage "handbook" presenting the most important ideas from the assigned papers, well-illustrated by figures and surveying the state-of-the-science on the topic.  This should be pushed to the repo at <a href="https://github.com/davidbau/sidn-handbook/">github.com/davidbau/sidn-handbook</a>.</li>
+  <li><b>Handbook demo.</b> Create, find, link, and test a small running demo of a method from the paper that other students can run.  Your handbook should link to this demo, and if you write code, that code should also be pushed to the sidn-handbook repo.
+  <li><b>Presentation.</b>  You will present the papers briefly to kick off the class; you may optionally use slides or you can just use your handbook to show visuals.  Your presentation should not be longer than 25 minutes and should discuss the same information that is in your handbook.
+  <li><b>Discussion survey.</b>  Write two discussion questions, and send out a Google Form for other students to respond to before class.  This survey should be sent to the class more than 24 hours before the class.</li>
+  <li><b>Discussion plan.</b> After midnight, make a spreadsheet of all the submitted discussion answers, and sort them to preselect 5-10 discussion answers from specific students you want to discuss.  During the class, call on those students to kick off the discussion.  (Also send the survey spreadsheet to Sheridan so that students can get points.)
 </ol>
 
-<h3>What do you mean by "explainer" in (2)?</h3>
-<p>The original inspiration for this idea was the <a href="https://people.maths.ox.ac.uk/trefethen/pdectb.html">PDE coffee table book</a>, 
-which was a group project at Oxford with the goal of creating a beautiful book describing different partial differential equations. 
+<h3>What should a "handbook" page cover?</h3>
+<p>The original inspiration for this idea was the <a href="https://people.maths.ox.ac.uk/trefethen/pdectb.html">PDE coffee table book</a>,
+which was a group project at Oxford with the goal of creating a beautiful book describing different partial differential equations.
 
-<p>For our purposes, you can think of it as creating a single page in a "handbook" of interpretability topics, 
-with more practical workaday tips on how to get going on a topic, such as: 
+<p>For our purposes, you can think of it as creating a single page in a "handbook" of interpretability topics, with more practical workaday tips on how to get going on a topic, such as:
 <ul>
-    <li>a brief explainer of the math you actually need to understand</li>
-    <li>opinionated pointers on what paragraph to read in which paper for what perspective</li>
-    <li>opinionated pointers to github or huggingface repositories containing code or data or models with notes on what quality they have</li>
-    <li>an example piece of running code (demos are always great)!</li>
+  <li>A one-sentence description of the problem is being solved and why</li>
+  <li>Copied (with attribution) or created figures that best illustrate the ideas</li>
+  <li>A brief explainer of any math you actually need to understand</li>
+  <li>Opinionated pointers on what paragraph to read in which paper for what perspective</li>
+  <li>Opinionated pointers to github or huggingface repositories containing code or data or models with notes on what quality they have</li>
+  <li>An example piece of running code (demos are always great)!</li>
 </ul>
+<p>Your handbook page is due on the day of the class you are presenting.  Ideally you can and should work on your handbook pages well in advance of your classes, so that they are a resource for students to read before your class.
+
+<h2>Handbook demos?</h2>
+
+<p>You should create or curate a running demo that other students can run to try out the method.
+
+<p>To demonstrate a complex method, your demo could be a curated choice of a pre-existing demo that is online, or it could be a short webpage describing exactly how to run an existing piece of code from a github repo, and showing an explicit example of what input and output to use.
+
+<p>In the ideal case, you will select a simple method to demonstrate and create a clean and minimal implementation of a method that shows how it works in a self-contained colab notebook.  If you create your own demo, we encourage you to use the <a href=https://nnsight.net/">nnsight.net</a> library to implement the method.
+
+<p>In your class, you should show your demo.
 
 <h2>Final Project</h2>
 
-<p>For your final project, you will be asked to apply model interpretation 
+<p>For your final project, you will be asked to apply model interpretation
 methods to a problem setting relevant to your own research interests. You will need to create
-a website/latex report on your research, similar to the ones created for class discussions. 
+a website or latex report on your research, similar to the ones created for class discussions.
 
-<p>At the end of the semester we will have a workshop where
-we invite all the non-computer scientists to join and
-see all the final project demonstrations.
+<p>At the end of the semester we will have a poster workshop where we invite other researchers to join and see all the final project demonstrations.
 
 <h2>Grading</h2>
-You will need to help run two classes throughout the semester, each of which will 
-count for 20% of your grade (40% total). 30% of your grade will be based on class participation 
-(e.g., reading the papers as evidenced by filling out the forms of questions requested by your classmates, 
-coming to class and offering thoughts), and the last 30% will come from your final project. 
+You will need to help run two classes throughout the semester, each of which will
+count for 20% of your grade (40% total). 30% of your grade will be based on class participation
+(e.g., reading the papers as evidenced by filling out the forms of questions requested by your classmates, coming to class and offering thoughts), and the last 30% will come from your final project.
+
